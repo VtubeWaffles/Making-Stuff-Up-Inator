@@ -2,7 +2,7 @@ import random
 
 
 def read_paragraphs(file_path, encoding='utf-8'):
-	with open(file_path, 'r', encoding=encoding, errors='replace') as file:
+	with open(file_path, 'r', encoding=encoding, errors='replace') as file: #Using utf-8 encoding because my locale is Japanese
 		paragraphs = file.read().split('\n\n')
 	return paragraphs
 
@@ -16,7 +16,7 @@ def write_paragraphs_to_file(selected_paragraphs, file_path):
 source_file = 'source.txt'
 destination_file = 'destination.txt'
 
-num_random_paragraphs = 10
+num_random_paragraphs = 10 #Amount of random paragraphs to copy
 
 paragraphs = read_paragraphs(source_file)
 
